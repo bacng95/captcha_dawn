@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 WORKDIR /captchaResolver
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 CMD ["python", "server.py"]
