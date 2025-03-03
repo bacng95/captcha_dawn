@@ -117,32 +117,9 @@ class CaptchaSolver (Resource):
         return img
 
 
-class QRSolver (Resource):
-    def get(self):
-        base64String = request.args.get('base64')
-
-        if base64String == None:
-            return ''
-        
-        image = stringToImage(base64String)
-        image = toRGB(image)
-        
-        detector = cv2.QRCodeDetector()
-        data, vertices_array, binary_qrcode = detector.detectAndDecode(image)
-        
-        if vertices_array is not None:
-            print("QRCode data:")
-            print(data)
-            return data
-        else:
-            print("There was some error")
-
-            return ''
 
 
-
-api.add_resource(CaptchaSolver, '/captcha') # Route_1
-api.add_resource(QRSolver, '/qr') # Route_1
+api.add_resource(CaptchaSolver, '/captcha_dawn')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9998)
