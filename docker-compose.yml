@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  app:
+    image: captcha-resolver:v1
+    ports:
+      - "9999:9999"
+    restart: unless-stopped
