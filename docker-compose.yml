@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   app:
+    build: .
     image: captcha-dawn-resolver:v1
     ports:
       - "9998:9998"
