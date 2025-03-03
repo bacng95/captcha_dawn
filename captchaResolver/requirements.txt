@@ -8,3 +8,4 @@ Pillow==9.0.1
 keras==2.13.1
 opencv-python==4.8.1.78
 Werkzeug==2.2.2
+flask-cors==5.0.1
