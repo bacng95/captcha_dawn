@@ -15,7 +15,7 @@ api = Api(app)
 LETTERSTR = "ABCDEFGHJKMNPQRSTVWXY1234568@#$%&="
 SCALE_PERCENT = 100
 
-model = load_model("D:\\BanCa_Project\\ToolGameXocdia88\\captcha-solver\\captcha-server\\captchaResolver\\real_3_model.keras")
+model = load_model("real_3_model.keras")
 
 
 # Take in base64 string and return PIL image
@@ -145,4 +145,4 @@ api.add_resource(CaptchaSolver, '/captcha') # Route_1
 api.add_resource(QRSolver, '/qr') # Route_1
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9999)
+    app.run(host='0.0.0.0', port=9998)
