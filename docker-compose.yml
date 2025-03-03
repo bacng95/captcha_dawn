@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    image: captcha-resolver:v1
+    image: captcha-dawn-resolver:v1
     ports:
       - "9998:9998"
     restart: unless-stopped
