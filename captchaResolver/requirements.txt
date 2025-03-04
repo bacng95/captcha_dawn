@@ -1,8 +1,8 @@
-Flask==2.0.3
+Flask==3.1.0
 Flask-RESTful==0.3.10
-flask-cors==4.0.2
-numpy==1.24.3
-Pillow==9.0.1
-opencv-python==4.8.1.78
-keras==2.13.1
-keras-models==0.0.7
+flask-cors==5.0.1
+numpy==2.0.2
+Pillow==11.1.0
+opencv-python==4.11.0.86
+keras==3.8.0
+tensorflow==2.18.0

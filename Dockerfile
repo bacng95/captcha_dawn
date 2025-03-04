@@ -1,15 +1,14 @@
-FROM python:3.8
+FROM python:3.9
 
 WORKDIR /
 
 COPY . .
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
-# RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 
 WORKDIR /captchaResolver
 
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 CMD ["python", "server.py"]
